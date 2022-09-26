@@ -17,10 +17,6 @@ jobs:
     name: Build and Deploy to Sandbox
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environment: sandbox
-    defaults:
-      run:
-        working-directory: terraform
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Set up Node.js
