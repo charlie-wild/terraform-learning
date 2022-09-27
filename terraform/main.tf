@@ -37,16 +37,6 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
-resource "aws_instance" "test_server" {
-  ami                    = "ami-06672d07f62285d1d"
-  instance_type          = "t2.micro"
-  vpc_security_group_ids = ["sg-0f4e8c19d3c61917a"]
-  subnet_id              = "subnet-00342b198b2002f84"
-
-  tags = {
-    Name = var.instance_name
-  }
-}
 
 terraform {
   backend "s3" {

@@ -34,3 +34,7 @@ jobs:
         run: cd terraform && terraform validate
       - name: Create resources
         run: cd terraform && terraform apply -auto-approve -var-file=terraform.tfvars
+      - name: serverless deploy
+        uses: serverless/github-action@v3
+        with:
+          args: deploy
