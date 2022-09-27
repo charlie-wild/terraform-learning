@@ -29,8 +29,8 @@ jobs:
           aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
           aws-region: eu-west-2
       - name: Initialize Terraform
-        run: terraform init
+        run: cd terraform && terraform init
       - name: Validate Terraform
         run: terraform validate
       - name: Create resources
-        run: terraform apply -auto-approve -var-file=terraform/terraform.tfvars
+        run: terraform apply -auto-approve -var-file=terraform.tfvars
