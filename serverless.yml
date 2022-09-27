@@ -1,10 +1,13 @@
-service: test-application
+service: charli-test-api
 
 provider:
   name: aws
   runtime: nodejs14.x
   stage: dev
   region: eu-west-2
+  package:
+    exclude:
+      - node_modules/**
 
 functions:
   app:
