@@ -10,5 +10,9 @@ functions:
   app:
     handler: index.handler
     events:
-      - http: ANY /
-      - http: "ANY {proxy+}"
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors:
+            origin: "*"
+            allowCredentials: false
