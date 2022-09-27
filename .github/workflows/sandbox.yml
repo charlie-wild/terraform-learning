@@ -1,8 +1,4 @@
 name: Build and Deploy to Sandbox
-inputs:
-  AWS_SESSION_TOKEN:
-    description: "AWS session token"
-    required: true
 
 # Controls when the workflow will run
 on:
@@ -14,6 +10,10 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      AWS_SESSION_TOKEN:
+      description: "AWS session token"
+      required: true
 jobs:
   deploy:
     name: Build and Deploy to Sandbox
