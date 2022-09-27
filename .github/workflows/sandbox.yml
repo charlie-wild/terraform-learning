@@ -31,6 +31,6 @@ jobs:
       - name: Initialize Terraform
         run: cd terraform && terraform init
       - name: Validate Terraform
-        run: terraform validate
+        run: cd terraform && terraform validate
       - name: Create resources
-        run: terraform apply -auto-approve -var-file=terraform.tfvars
+        run: cd terraform && terraform apply -auto-approve -var-file=terraform.tfvars
