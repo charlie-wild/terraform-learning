@@ -33,4 +33,4 @@ jobs:
       - name: Validate Terraform
         run: terraform validate
       - name: Create resources
-        run: terraform apply -auto-approve -var-file=terraform/variables.tf
+        run: terraform apply -auto-approve -var-file=terraform/terraform.tfvars
