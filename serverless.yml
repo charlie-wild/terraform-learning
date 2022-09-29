@@ -7,17 +7,13 @@ provider:
   region: eu-west-2
 
 package:
-  individually: true
   exclude:
-    - "*/**"
+    - node_modules/**
+    - terraform/**
 
 functions:
   app:
     handler: index.handler
-    package:
-      include:
-        - "index.js"
-        - "package.json"
     events:
       - http:
           path: /{proxy+}
