@@ -5,10 +5,11 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: eu-west-2
-  package:
-    individually: true
-    exclude:
-      - "*/**"
+
+package:
+  individually: true
+  exclude:
+    - "*/**"
 
 functions:
   app:
