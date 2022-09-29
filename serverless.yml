@@ -8,7 +8,6 @@ provider:
 
 package:
   exclude:
-    - node_modules/**
     - terraform/**
 
 functions:
