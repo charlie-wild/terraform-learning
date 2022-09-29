@@ -6,9 +6,9 @@ provider:
   stage: dev
   region: eu-west-2
   package:
-    exclude:
-      - node_modules/**
-      - terraform/**
+    include:
+      - index.js
+      - package.json
 
 functions:
   app:
