@@ -6,13 +6,17 @@ provider:
   stage: dev
   region: eu-west-2
   package:
-    include:
-      - index.js
-      - package.json
+    individually: true
+    exclude:
+      - "*/**"
 
 functions:
   app:
     handler: index.handler
+    package:
+      include:
+        - index.js
+        - package.json
     events:
       - http:
           path: /{proxy+}
