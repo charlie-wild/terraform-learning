@@ -16,8 +16,8 @@ functions:
     handler: index.handler
     package:
       include:
-        - index.js
-        - package.json
+        - "index.js"
+        - "package.json"
     events:
       - http:
           path: /{proxy+}
